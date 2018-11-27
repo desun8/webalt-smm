@@ -7,6 +7,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Sprites
 const SpritesmithPlugin = require('webpack-spritesmith');
+// const SpritePlugin = require('svg-sprite-loader/plugin');
 
 module.exports = {
   entry: {
@@ -26,7 +27,7 @@ module.exports = {
   devtool: 'source-map',
 
   module: {
-    rules: [
+    rules: [      
       // babel
       {
         test: /\.js$/,
@@ -35,6 +36,10 @@ module.exports = {
           loader: 'babel-loader',
         },
       },
+
+      // Disabled AMD syntax
+      // fix problem with scrollMagic plugins
+      { test: /\.js$/, loader: 'imports-loader?define=>false' },
 
       // css
       {
@@ -75,6 +80,24 @@ module.exports = {
         ],
       },
 
+      // svg sprites
+      // {
+      //   test: /\.svg$/,
+      //   // include: [
+      //   //   path.resolve(__dirname, 'src/images/sprites-svg')
+      //   // ],
+      //   use: [
+      //     {
+      //       loader: 'svg-sprite-loader',
+      //       options: {
+      //         extract: true,
+      //         publicPath: '/static/',
+      //       },
+      //     },
+      //     'svgo-loader',
+      //   ],
+      // },
+
       // Sprites
       // {
       //   test: /\.png$/,
@@ -86,18 +109,6 @@ module.exports = {
   },
 
   plugins: [
-    new MiniCssExtractPlugin({
-      filename: 'style.css',
-      chunkFilename: '[id].css',
-    }),
-
-    new HtmlWebpackPlugin({
-      // inject: false,
-      // hash: true,
-      template: './src/index.html',
-      filename: 'index.html',
-    }),
-
     new webpack.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
@@ -114,8 +125,22 @@ module.exports = {
         css: path.resolve(__dirname, 'src/style/lib/sprite.css'),
       },
       apiOptions: {
-        cssImageRef: '~sprite.png',
+        cssImageRef: './images/sprite.png',
       },
+    }),
+
+    // new SpritePlugin(),
+
+    new MiniCssExtractPlugin({
+      filename: 'style.css',
+      chunkFilename: '[id].css',
+    }),
+
+    new HtmlWebpackPlugin({
+      // inject: false,
+      // hash: true,
+      template: './src/index.html',
+      filename: 'index.html',
     }),
   ],
 };

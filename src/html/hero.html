@@ -10,13 +10,21 @@
       <p>Просто оставьте свой номер и мы раскажем как увеличить Ваши продажи</p>
     </div>
 
-    <div id="js-heroBtns" class="hero_btns">
-      <button class="btn  btn--black" type="button">+7 (000) 000-00-00</button>
-      <button class="btn  btn--orange" type="button">Перезвонить мне</button>
-    </div>
+
+    <form action="" id="formCall" class="hero_btns">
+      <input class="btn  btn--black" type="text" name="phone" placeholder="Телефон">
+      <button class="btn  btn--orange" type="submit">Перезвонить мне</button>
+    </form>
+    <p class="hero_success">Ваш запрос был успешно отправлен!<br>При желании, вы можете отправить его повторно ;)</p>
+
   </div>
 
   <div id="js-heroPhone" class="hero_bg-phone"></div>
   <div id="js-heroCircle" class="hero_bg-circle"></div>
-  <div class="hero_icon-down"></div>
+  <button id="js-heroDown" class="hero_btn-down">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none">
+      <rect width="2" height="22" x=".444" y="16" fill="#fff" rx="1" transform="rotate(-45 .444 16)" />
+      <rect width="2" height="22" x="16" y="31.556" fill="#fff" rx="1" transform="rotate(-135 16 31.556)" />
+    </svg>
+  </button>
 </section>

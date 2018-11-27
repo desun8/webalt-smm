@@ -37,16 +37,22 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 20px;
-  color: var(--black);
-  font-size: 22px;
-  line-height: 26px;
-  font-weight: 700;
+  margin-bottom: 0;
+  color: #393939;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
 
-  @media (--mobile) {
-    margin-bottom: 50px;
-    font-size: 18px;
-    line-height: 22px;
+  @media (--tablet) {
+    margin-bottom: 0;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  @media (--tablet960) {
+    margin-bottom: 0;
+    font-size: 42px;
+    line-height: 50px;
   }
 }
 
@@ -70,6 +76,17 @@ h3 {
   @media (--desktop1200) {
     font-size: 34px;
     line-height: 40px;
+  }
+}
+
+h4 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+
+  @media (--tablet960) {
+    font-size: 22px;
+    line-height: 26px;
   }
 }
 

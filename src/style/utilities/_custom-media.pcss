@@ -16,6 +16,7 @@
 @custom-media --tablet (width >= 48em);
 @custom-media --tablet960 (width >= 60em);
 @custom-media --tabletOnly (width >= 48em) and (width <= 50em);
+@custom-media --notTablet (width > 48em);
 
 /* @custom-media --tabletBig (width >= 58.75em) and (width < 80em);
 @custom-media --tabletNoBig (width >= 48em) and (width < 58.75em);
@@ -28,10 +29,9 @@
 /* @custom-media --tablet980 (width < 61.25em); */
 /* @custom-media --tablet900 (width < 56.25em); */
 
-/* @custom-media --notTablet (width > 48em); */
 
-/* @custom-media --tablet (width <= 48em); */
-/* @custom-media --mobile (width < 47em); */
+@custom-media --tabletMin (width <= 48em);
+@custom-media --mobileOnly (width < 47em);
 /* @custom-media --mobile400 (width < 25em); */
 
 /* @custom-media --tablet800 (width > 50em) and (width < 80em);
