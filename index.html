@@ -35,7 +35,7 @@
         <li class="page-nav_item"><a href="#">Контакты</a></li>
       </ul>
 
-      <button class="page-nav_phone-modal" id="navPhoneModal">+7 (4212) 25-30-85</button>
+      <a href="tel:+74212253085" class="page-nav_phone-modal" id="navPhoneModal">+7 (4212) 25-30-85</a>
     </nav>
 
     <button id="showPageMenu" class="page-header_menu-open">
@@ -488,36 +488,36 @@
   </div>
 </div>
   <div id="modalFeedback" class="modal  modal--form">
-  <div class="modal_top">
-    <a href="#">
-      <img src="./images/logo-full.png" alt="web alternative">
-    </a>
-    <button id="modalFeedbackClose" class="modal_close" type="button"><span class="hideMobile">Закрыть</span></button>
-  </div>
-  <form id="modalForm" name="modal-form" class="feedback-form" action="">
-    <label class="feedback-form_col-2  feedback-form_required" for="">
-      <input class="feedback-form_name" type="text" name="name" placeholder="Имя" required>
-    </label>
-    <label class="feedback-form_col-2  feedback-form_col-2--phone  feedback-form_required" for="">
-      <input class="feedback-form_phone" type="tel" name="phone" placeholder="Номер телефона" required>
-    </label>
-    <label class="feedback-form_col-1" for="">
-      <input class="feedback-form_email" type="email" name="email" placeholder="Email">
-    </label>
-    <label class="feedback-form_col-1  feedback-form_required" for="">
-      <textarea class="feedback-form_message" name="message" cols="30" rows="14" placeholder="Адрес сайта и Описание кейса"
-        required></textarea>
-    </label>
-
-    <label for="modal-feedback-agreements" class="custom-checkbox  feedback-form_agreements">Нажимая на кнопку "Отправить", я
-      даю согласие на обработку персональных данных.
-      <input id="modal-feedback-agreements" class="custom-checkbox_input" type="checkbox" name="agreements" required>
-      <span class="custom-checkbox_checkmark"></span>
-    </label>
-
-    <div class="notRobot"></div>
-    <button id="modalFormSubmit" class="btn  btn--orange" type="submit">Отправить</button>
-  </form>
+    <div class="modal_top">
+      <a href="#">
+        <img src="./images/logo-full.png" alt="web alternative">
+      </a>
+      <button id="modalFeedbackClose" class="modal_close" type="button"><span class="hideMobile">Закрыть</span></button>
+    </div>
+    <form id="modalForm" name="modal-form" class="feedback-form" action="">
+      <label class="feedback-form_col-2  feedback-form_required" for="">
+        <input class="feedback-form_name" type="text" name="name" placeholder="Имя" required>
+      </label>
+      <label class="feedback-form_col-2  feedback-form_col-2--phone  feedback-form_required" for="">
+        <input class="feedback-form_phone" type="tel" name="phone" placeholder="Номер телефона" required>
+      </label>
+      <label class="feedback-form_col-1" for="">
+        <input class="feedback-form_email" type="email" name="email" placeholder="Email">
+      </label>
+      <label class="feedback-form_col-1  feedback-form_required" for="">
+        <textarea class="feedback-form_message" name="message" placeholder="Адрес сайта и Описание кейса"
+          required></textarea>
+      </label>
+  
+      <label for="modal-feedback-agreements" class="custom-checkbox  feedback-form_agreements">Нажимая на кнопку "Отправить", я
+        даю согласие на обработку персональных данных.
+        <input id="modal-feedback-agreements" class="custom-checkbox_input" type="checkbox" name="agreements" required>
+        <span class="custom-checkbox_checkmark"></span>
+      </label>
+  
+      <div class="notRobot"></div>
+      <button id="modalFormSubmit" class="btn  btn--orange" type="submit">Отправить</button>
+    </form>
 </div>
   <div id="modalOk" class="modal  modal--result">
   <div class="modal_top">
